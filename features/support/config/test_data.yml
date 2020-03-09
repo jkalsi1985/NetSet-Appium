@@ -1,0 +1,22 @@
+users:
+ existing:
+  emailaddress: profile1@net.com
+  emailaddress2: jag_test@net.com
+  password: testing1234
+
+passwords:
+ valid_password: testing1234
+ not_matching_password: abc123
+
+emails:
+ valid_email: profile1@net.com
+ invalid_email: jag_test@net.con
+
+mobile_number: 0741237884748
+
+profile:
+ name: Automation testing
+ username: testing
+ user_bio: Finish creating my profile yipee
+
+comment: OMG! I love this photo

@@ -1,0 +1,9 @@
+<% ci_opts= "--format progress --format html --out=features_report.html  || 'pretty'} --strict --tags ~@wip --r features/" %>
+
+ci-sanity-dev:            <%= ci_opts %> --tags @sanity-all,@sanity-dev
+ci-sanity-staging:        <%= ci_opts %> --tags @sanity-all,@sanity-staging
+ci-sanity-production:     <%= ci_opts %> --tags @sanity-all
+
+ci-regression-dev:        <%= ci_opts %> --tags ~@qa,~@production,~@sanity-qa
+ci-regression-staging:    <%= ci_opts %> --tags ~@dev,~@production,~@sanity-dev
+ci-regression-production: <%= ci_opts %> --tags ~@dev,~@qa,~@sanity-dev,~@sanity-staging
